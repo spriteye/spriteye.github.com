@@ -56,8 +56,16 @@ body > header {
 }
 
 .centralize {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
   align-items: center;
+
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
@@ -65,6 +73,7 @@ body > header {
   position: absolute;
   top: 35%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   color: #fff;
 }
@@ -105,6 +114,7 @@ body > header {
   top: 50%;
   left: 50%;
   width: 100%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   padding: 0 30px;
   text-align: center;
@@ -133,6 +143,7 @@ body > header {
   width: 50px;
   position: absolute;
   content: '';
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   right: -11px;
   top: 0;
@@ -144,6 +155,7 @@ body > header {
   width: 100px;
   position: absolute;
   content: '';
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   left: -69px;
   bottom: 0;
