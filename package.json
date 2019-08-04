@@ -1,0 +1,23 @@
+{
+  "name": "spriteye.me",
+  "description": "Homepage of spriteye",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spriteye/spriteye.github.com.git"
+  },
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "deploy": "gatsby build && gh-pages -d public -b master"
+  },
+  "dependencies": {
+    "gatsby": "2.14.4",
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
+  },
+  "devDependencies": {
+    "gh-pages": "2.1.1"
+  }
+}
