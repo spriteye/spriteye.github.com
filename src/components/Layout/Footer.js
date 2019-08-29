@@ -56,9 +56,9 @@ const Footer = styled.footer`
   border-top: 1px solid #eee;
   width: 100vw;
   height: 2.5rem;
-  transition: bottom 0.4s ease;
+  transition: bottom 0.4s ease, ${({ theme })=> theme.themeTransition};
 
-  background-color: white;
+  background-color: ${({ theme }) => theme.bg};
 
   font-size: 0.75em;
 

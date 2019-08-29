@@ -4,6 +4,7 @@ import React from "react"
 import styled from "styled-components"
 
 import LayoutContainer from "~components/Layout/Container"
+import ThemeSwitch from "~components/ThemeSwitch"
 import useWindowScrollDirection from "~hooks/useWindowScrollDirection"
 
 export default () => {
@@ -12,6 +13,7 @@ export default () => {
     <Header className={cx({ "hide": !isUp  })}>
       <LayoutContainer>
         <Title to="/">spriteye</Title>
+        <ThemeSwitch />
       </LayoutContainer>
     </Header>
   )
@@ -24,9 +26,9 @@ const Header = styled.header`
   display: flex;
   height: 3.5rem;
   border-bottom: 1px solid #eee;
-  transition: top 0.4s ease;
+  transition: top 0.4s ease, ${({ theme  }) => theme.themeTransition};
 
-  background-color: white;
+  background-color: ${({ theme  }) => theme.bg};
 
   @media (max-width: 500px) {
     &.hide {
