@@ -1,3 +1,4 @@
+import cx from "classnames"
 import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
@@ -5,43 +6,47 @@ import { GoMail, GoMarkGithub } from "react-icons/go"
 
 import Avatar from "~components/Avatar"
 import LayoutContainer from "~components/Layout/Container"
+import useWindowScrollDirection from "~hooks/useWindowScrollDirection"
 
-export default () => (
-  <Footer>
-    <LayoutContainer>
-      © 2019 Hwangmok Cho
-      <ContactList>
-        <Contact
-          href="https://github.com/spriteye"
-          title="GitHub"
-        >
-          <GoMarkGithub />
-        </Contact>
-        <Contact
-          href="mailto:spriteye@gmail.com"
-          title="spriteye@gmail.com"
-        >
-          <GoMail />
-        </Contact>
-        <Contact
-          href="https://www.buymeacoffee.com/mNtBzyAFU"
-          title="Buy me a coffee"
-        >
-          <img
-            src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg"
-            alt="Buy me a coffee"
-          />
-        </Contact>
-        <Me
-          to="/about"
-          title="About me"
-        >
-          <Avatar />
-        </Me>
-      </ContactList>
-    </LayoutContainer>
-  </Footer>
-)
+export default () => {
+  const { isUp } = useWindowScrollDirection()
+  return (
+    <Footer className={cx({ "hide": !isUp })}>
+      <LayoutContainer>
+        © 2019 Hwangmok Cho
+        <ContactList>
+          <Contact
+            href="https://github.com/spriteye"
+            title="GitHub"
+          >
+            <GoMarkGithub />
+          </Contact>
+          <Contact
+            href="mailto:spriteye@gmail.com"
+            title="spriteye@gmail.com"
+          >
+            <GoMail />
+          </Contact>
+          <Contact
+            href="https://www.buymeacoffee.com/mNtBzyAFU"
+            title="Buy me a coffee"
+          >
+            <img
+              src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg"
+              alt="Buy me a coffee"
+            />
+          </Contact>
+          <Me
+            to="/about"
+            title="About me"
+          >
+            <Avatar />
+          </Me>
+        </ContactList>
+      </LayoutContainer>
+    </Footer>
+  )
+}
 
 const Footer = styled.footer`
   position: fixed;
@@ -51,10 +56,17 @@ const Footer = styled.footer`
   border-top: 1px solid #eee;
   width: 100vw;
   height: 2.5rem;
+  transition: bottom 0.4s ease;
 
   background-color: white;
 
   font-size: 0.75em;
+
+  @media (max-width: 500px) {
+    &.hide {
+      bottom: -2.5rem;
+    }
+  }
 `
 
 const ContactList = styled.div`

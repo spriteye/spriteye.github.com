@@ -5,6 +5,7 @@ module.exports = {
       options: {
         alias: {
           "~components": `src/components`,
+          "~hooks": `src/hooks`,
           "~styles": `src/styles`
         },
         extensions: []
