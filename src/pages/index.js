@@ -1,5 +1,7 @@
 import React from "react"
 
+import Layout from "~components/Layout"
+
 export default () => {
   console.log(String.raw`
                     _ _
@@ -10,8 +12,8 @@ export default () => {
         |_|                   |___/
   `)
   return (
-    <div>
+    <Layout>
       spriteye.me
-    </div>
+    </Layout>
   )
 }
