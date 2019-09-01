@@ -8,21 +8,20 @@ const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
 
   body {
-    transition: ${({ theme }) => theme.themeTransition};
-
-    background-color: ${({ theme }) => theme.bg};
     color: ${({ theme }) => theme.color};
-
-    font-family: 'Spoqa Han Sans', 'Nanum Gothic';
     font-weight: 300;
     font-size: 17px;
-    word-break: keep-all;
+    font-family: 'Spoqa Han Sans', 'Nanum Gothic', sans-serif;
     line-height: 1.5;
+    word-break: keep-all;
+
+    background-color: ${({ theme }) => theme.bg};
+
+    transition: ${({ theme }) => theme.themeTransition};
   }
 
   a {
     color: ${({ theme }) => theme.color};
-
     text-decoration: none;
 
     cursor: pointer;

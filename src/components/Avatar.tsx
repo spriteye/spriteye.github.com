@@ -8,16 +8,18 @@ interface AvaterProps {
 const Avatar: React.FC<AvaterProps> = ({ size = '1.5rem' }: AvaterProps) => {
   const Container = styled.div`
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: ${size};
     height: ${size};
+
     border-radius: 50%;
-    justify-content: center;
-    align-items: center;
   `
 
   const Image = styled.img`
     width: ${size};
     height: ${size};
+
     border-radius: 50%;
   `
 

@@ -13,14 +13,15 @@ const StyledFooter = styled.footer`
   bottom: 0;
 
   display: flex;
-  border-top: 1px solid #eee;
   width: 100vw;
   height: 2.5rem;
-  transition: bottom 0.4s ease, ${({ theme }) => theme.themeTransition};
-
-  background-color: ${({ theme }) => theme.bg};
 
   font-size: 0.75em;
+
+  background-color: ${({ theme }) => theme.bg};
+  border-top: 1px solid #eee;
+
+  transition: bottom 0.4s ease, ${({ theme }) => theme.themeTransition};
 
   @media (max-width: 500px) {
     &.hide {
@@ -36,8 +37,8 @@ const StyledContactList = styled.div`
 
 const StyledContact = styled.a`
   display: inline-flex;
-  width: 1.85rem;
   justify-content: center;
+  width: 1.85rem;
 
   font-size: 1.2rem;
 
@@ -50,8 +51,8 @@ const StyledContact = styled.a`
 
 const StyledMe = styled(Link)`
   display: inline-flex;
-  width: 1.85rem;
   justify-content: center;
+  width: 1.85rem;
 
   opacity: .5;
 

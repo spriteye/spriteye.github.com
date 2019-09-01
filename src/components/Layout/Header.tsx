@@ -13,10 +13,11 @@ const StyledHeader = styled.header`
 
   display: flex;
   height: 3.5rem;
-  border-bottom: 1px solid #eee;
-  transition: top 0.4s ease, ${({ theme }) => theme.themeTransition};
 
   background-color: ${({ theme }) => theme.bg};
+  border-bottom: 1px solid #eee;
+
+  transition: top 0.4s ease, ${({ theme }) => theme.themeTransition};
 
   @media (max-width: 500px) {
     &.hide {
@@ -30,8 +31,8 @@ const StyledTitle = styled(Link)`
 
   color: hotpink;
 
-  font-family: Monoton;
   font-size: 1.8rem;
+  font-family: Monoton, sans-serif;
 `
 
 const Header: React.FC = () => {

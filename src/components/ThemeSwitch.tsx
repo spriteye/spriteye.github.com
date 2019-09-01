@@ -6,12 +6,11 @@ import { IoMdMoon, IoMdSunny } from 'react-icons/io'
 
 const StyledIcon = styled.div`
   display: flex;
-  height: 100%;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100%;
 
   color: yellow;
-
   font-size: 1rem;
 `
 
