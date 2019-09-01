@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
 
 interface WindowScrollDirection {
   y: number,
   isUp: boolean
 }
 
-function useWindowScrollDirection(): WindowScrollDirection {
+function useWindowScrollDirection (): WindowScrollDirection {
   const [windowScrollDirection, setWindowScrollDirection] = useState<WindowScrollDirection>({
-    y: typeof window === "object" ? window.pageYOffset : 0,
+    y: typeof window === 'object' ? window.pageYOffset : 0,
     isUp: true
   })
 
@@ -19,9 +19,9 @@ function useWindowScrollDirection(): WindowScrollDirection {
       }))
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener('scroll', handleScroll)
 
-    return () => window.removeEventListener("scroll", handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return windowScrollDirection

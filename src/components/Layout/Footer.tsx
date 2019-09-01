@@ -1,12 +1,12 @@
-import cx from "classnames"
-import { Link } from "gatsby"
-import React from "react"
-import styled from "styled-components"
-import { GoMail, GoMarkGithub } from "react-icons/go"
+import cx from 'classnames'
+import { Link } from 'gatsby'
+import React from 'react'
+import styled from 'styled-components'
+import { GoMail, GoMarkGithub } from 'react-icons/go'
 
-import Avatar from "~components/Avatar"
-import LayoutContainer from "~components/Layout/Container"
-import useWindowScrollDirection from "~hooks/useWindowScrollDirection"
+import Avatar from '~components/Avatar'
+import LayoutContainer from '~components/Layout/Container'
+import useWindowScrollDirection from '~hooks/useWindowScrollDirection'
 
 const StyledFooter = styled.footer`
   position: fixed;
@@ -16,7 +16,7 @@ const StyledFooter = styled.footer`
   border-top: 1px solid #eee;
   width: 100vw;
   height: 2.5rem;
-  transition: bottom 0.4s ease, ${({ theme })=> theme.themeTransition};
+  transition: bottom 0.4s ease, ${({ theme }) => theme.themeTransition};
 
   background-color: ${({ theme }) => theme.bg};
 
@@ -63,34 +63,34 @@ const StyledMe = styled(Link)`
 const Footer: React.FC = () => {
   const { isUp } = useWindowScrollDirection()
   return (
-    <StyledFooter className={cx({ "hide": !isUp })}>
+    <StyledFooter className={cx({ hide: !isUp })}>
       <LayoutContainer>
         © 2019 Hwangmok Cho
         <StyledContactList>
           <StyledContact
-            href="https://github.com/spriteye"
-            title="GitHub"
+            href='https://github.com/spriteye'
+            title='GitHub'
           >
             <GoMarkGithub />
           </StyledContact>
           <StyledContact
-            href="mailto:spriteye@gmail.com"
-            title="spriteye@gmail.com"
+            href='mailto:spriteye@gmail.com'
+            title='spriteye@gmail.com'
           >
             <GoMail />
           </StyledContact>
           <StyledContact
-            href="https://www.buymeacoffee.com/mNtBzyAFU"
-            title="Buy me a coffee"
+            href='https://www.buymeacoffee.com/mNtBzyAFU'
+            title='Buy me a coffee'
           >
             <img
-              src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg"
-              alt="Buy me a coffee"
+              src='https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg'
+              alt='Buy me a coffee'
             />
           </StyledContact>
           <StyledMe
-            to="/about"
-            title="About me"
+            to='/about'
+            title='About me'
           >
             <Avatar />
           </StyledMe>

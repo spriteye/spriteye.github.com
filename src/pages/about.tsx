@@ -1,13 +1,13 @@
-import React from "react"
+import React from 'react'
 
-import Avatar from "~components/Avatar"
-import Center from "~components/Center"
-import Layout from "~components/Layout"
+import Avatar from '~components/Avatar'
+import Center from '~components/Center'
+import Layout from '~components/Layout'
 
 const About: React.FC = () => (
   <Layout>
     <Center>
-      <Avatar size="5rem" />
+      <Avatar size='5rem' />
     </Center>
     <p>
       소프트웨어 엔지니어 조황목입니다.

@@ -1,11 +1,11 @@
-import cx from "classnames"
-import { Link } from "gatsby"
-import React from "react"
-import styled from "styled-components"
+import cx from 'classnames'
+import { Link } from 'gatsby'
+import React from 'react'
+import styled from 'styled-components'
 
-import LayoutContainer from "~components/Layout/Container"
-import ThemeSwitch from "~components/ThemeSwitch"
-import useWindowScrollDirection from "~hooks/useWindowScrollDirection"
+import LayoutContainer from '~components/Layout/Container'
+import ThemeSwitch from '~components/ThemeSwitch'
+import useWindowScrollDirection from '~hooks/useWindowScrollDirection'
 
 const StyledHeader = styled.header`
   position: sticky;
@@ -35,11 +35,11 @@ const StyledTitle = styled(Link)`
 `
 
 const Header: React.FC = () => {
-  const { isUp  } = useWindowScrollDirection()
+  const { isUp } = useWindowScrollDirection()
   return (
-    <StyledHeader className={cx({ "hide": !isUp  })}>
+    <StyledHeader className={cx({ hide: !isUp })}>
       <LayoutContainer>
-        <StyledTitle to="/">spriteye</StyledTitle>
+        <StyledTitle to='/'>spriteye</StyledTitle>
         <ThemeSwitch />
       </LayoutContainer>
     </StyledHeader>
