@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "baseUrl": "src",
+    "paths": {
+      "~components/*": ["components/*"],
+      "~hooks/*": ["hooks/*"],
+      "~styles/*": ["styles/*"]
+    },
+    "skipLibCheck": true,
+    "strict": true
+  }
+}

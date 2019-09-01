@@ -4,23 +4,7 @@ import Switch from "react-switch"
 import styled from "styled-components"
 import { IoMdMoon, IoMdSunny } from "react-icons/io"
 
-export default () => {
-  const { isDark, toggleDark }= useContext(ThemeManagerContext)
-  return (
-    <Switch
-      checked={!isDark}
-      onChange={toggleDark}
-      onColor="#0f1114"
-      offColor="#0f1114"
-      height={25}
-      width={50}
-      checkedIcon={<Icon><IoMdSunny /></Icon>}
-      uncheckedIcon={<Icon><IoMdMoon /></Icon>}
-    />
-  )
-}
-
-const Icon = styled.div`
+const StyledIcon = styled.div`
   display: flex;
   height: 100%;
   justify-content: center;
@@ -30,3 +14,21 @@ const Icon = styled.div`
 
   font-size: 1rem;
 `
+
+const ThemeSwitch: React.FC = () => {
+  const { isDark, toggleDark }= useContext(ThemeManagerContext)
+  return (
+    <Switch
+      checked={!isDark}
+      onChange={toggleDark}
+      onColor="#0f1114"
+      offColor="#0f1114"
+      height={25}
+      width={50}
+      checkedIcon={<StyledIcon><IoMdSunny /></StyledIcon>}
+      uncheckedIcon={<StyledIcon><IoMdMoon /></StyledIcon>}
+    />
+  )
+}
+
+export default ThemeSwitch

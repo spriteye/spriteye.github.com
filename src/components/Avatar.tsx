@@ -1,7 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-export default ({ size = "1.5rem" }) => {
+interface AvaterProps {
+  size?: string
+}
+
+const Avatar: React.FC<AvaterProps> = ({ size = "1.5rem" }) => {
   const Container = styled.div`
     display: flex;
     width: ${size};
@@ -23,3 +27,5 @@ export default ({ size = "1.5rem" }) => {
     </Container>
   )
 }
+
+export default Avatar

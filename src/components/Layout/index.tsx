@@ -5,7 +5,11 @@ import LayoutHeader from "~components/Layout/Header"
 import LayoutMain from "~components/Layout/Main"
 import GlobalStyle from "~styles/GlobalStyle"
 
-export default ({ children }) => (
+interface LayoutProps {
+  children: React.ReactNode
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => (
   <>
     <GlobalStyle />
     <LayoutHeader />
@@ -13,3 +17,5 @@ export default ({ children }) => (
     <LayoutFooter />
   </>
 )
+
+export default Layout

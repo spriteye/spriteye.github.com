@@ -1,14 +1,14 @@
 import { createGlobalStyle } from "styled-components"
 import styledNormalize from "styled-normalize"
 
-export default createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
   @import url(//fonts.googleapis.com/css?family=Monoton|Nanum+Gothic&display=swap);
 
   ${styledNormalize}
 
   body {
-    transition: ${({ theme  }) => theme.themeTransition};
+    transition: ${({ theme }) => theme.themeTransition};
 
     background-color: ${({ theme }) => theme.bg};
     color: ${({ theme }) => theme.color};
@@ -28,3 +28,5 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 `
+
+export default GlobalStyle

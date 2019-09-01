@@ -1,3 +1,5 @@
+require("ts-node").register({ files: true })
+
 module.exports = {
   plugins: [
     {
@@ -15,9 +17,10 @@ module.exports = {
     {
       resolve: `gatsby-styled-components-dark-mode`,
       options: {
-        dark: require(`${__dirname}/src/styles/theme/dark.js`),
-        light: require(`${__dirname}/src/styles/theme/light.js`)
+        dark: require(`${__dirname}/src/styles/theme`).dark,
+        light: require(`${__dirname}/src/styles/theme`).light
       }
-    }
+    },
+    `gatsby-plugin-typescript`
   ]
 }

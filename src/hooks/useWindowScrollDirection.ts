@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react"
 
-export default () => {
-  const [windowScrollDirection, setWindowScrollDirection] = useState({
+interface WindowScrollDirection {
+  y: number,
+  isUp: boolean
+}
+
+function useWindowScrollDirection(): WindowScrollDirection {
+  const [windowScrollDirection, setWindowScrollDirection] = useState<WindowScrollDirection>({
     y: typeof window === "object" ? window.pageYOffset : 0,
     isUp: true
   })
@@ -21,3 +26,5 @@ export default () => {
 
   return windowScrollDirection
 }
+
+export default useWindowScrollDirection

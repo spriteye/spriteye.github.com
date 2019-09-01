@@ -7,28 +7,16 @@ import LayoutContainer from "~components/Layout/Container"
 import ThemeSwitch from "~components/ThemeSwitch"
 import useWindowScrollDirection from "~hooks/useWindowScrollDirection"
 
-export default () => {
-  const { isUp  } = useWindowScrollDirection()
-  return (
-    <Header className={cx({ "hide": !isUp  })}>
-      <LayoutContainer>
-        <Title to="/">spriteye</Title>
-        <ThemeSwitch />
-      </LayoutContainer>
-    </Header>
-  )
-}
-
-const Header = styled.header`
+const StyledHeader = styled.header`
   position: sticky;
   top: 0;
 
   display: flex;
   height: 3.5rem;
   border-bottom: 1px solid #eee;
-  transition: top 0.4s ease, ${({ theme  }) => theme.themeTransition};
+  transition: top 0.4s ease, ${({ theme }) => theme.themeTransition};
 
-  background-color: ${({ theme  }) => theme.bg};
+  background-color: ${({ theme }) => theme.bg};
 
   @media (max-width: 500px) {
     &.hide {
@@ -37,7 +25,7 @@ const Header = styled.header`
   }
 `
 
-const Title = styled(Link)`
+const StyledTitle = styled(Link)`
   display: flex;
 
   color: hotpink;
@@ -45,3 +33,17 @@ const Title = styled(Link)`
   font-family: Monoton;
   font-size: 1.8rem;
 `
+
+const Header: React.FC = () => {
+  const { isUp  } = useWindowScrollDirection()
+  return (
+    <StyledHeader className={cx({ "hide": !isUp  })}>
+      <LayoutContainer>
+        <StyledTitle to="/">spriteye</StyledTitle>
+        <ThemeSwitch />
+      </LayoutContainer>
+    </StyledHeader>
+  )
+}
+
+export default Header
