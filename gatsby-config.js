@@ -8,11 +8,20 @@ module.exports = {
         alias: {
           "~components": `src/components`,
           "~hooks": `src/hooks`,
+          "~models": `src/models`,
           "~styles": `src/styles`
         },
         extensions: []
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `contents`,
+        path: `${__dirname}/src/pages/`
+      }
+    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-styled-components-dark-mode`,

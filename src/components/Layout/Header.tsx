@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 
-import LayoutContainer from '~components/Layout/Container'
+import LayoutMarginalContainer from '~components/Layout/MarginalContainer'
 import ThemeSwitch from '~components/ThemeSwitch'
 import useWindowScrollDirection from '~hooks/useWindowScrollDirection'
 
@@ -39,10 +39,10 @@ const Header: React.FC = () => {
   const { isUp } = useWindowScrollDirection()
   return (
     <StyledHeader className={cx({ hide: !isUp })}>
-      <LayoutContainer>
+      <LayoutMarginalContainer>
         <StyledTitle to='/'>spriteye</StyledTitle>
         <ThemeSwitch />
-      </LayoutContainer>
+      </LayoutMarginalContainer>
     </StyledHeader>
   )
 }

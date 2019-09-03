@@ -1,11 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
-import styledNormalize from 'styled-normalize'
+import modernNormalize from 'styled-modern-normalize'
 
 const GlobalStyle = createGlobalStyle`
   @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
   @import url(//fonts.googleapis.com/css?family=Monoton|Nanum+Gothic&display=swap);
 
-  ${styledNormalize}
+  ${modernNormalize}
 
   body {
     color: ${({ theme }) => theme.color};

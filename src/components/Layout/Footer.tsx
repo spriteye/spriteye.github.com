@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { GoMail, GoMarkGithub } from 'react-icons/go'
 
 import Avatar from '~components/Avatar'
-import LayoutContainer from '~components/Layout/Container'
+import LayoutMarginalContainer from '~components/Layout/MarginalContainer'
 import useWindowScrollDirection from '~hooks/useWindowScrollDirection'
 
 const StyledFooter = styled.footer`
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
   const { isUp } = useWindowScrollDirection()
   return (
     <StyledFooter className={cx({ hide: !isUp })}>
-      <LayoutContainer>
+      <LayoutMarginalContainer>
         © 2019 Hwangmok Cho
         <StyledContactList>
           <StyledContact
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
             <Avatar />
           </StyledMe>
         </StyledContactList>
-      </LayoutContainer>
+      </LayoutMarginalContainer>
     </StyledFooter>
   )
 }
