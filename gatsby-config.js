@@ -1,61 +1,61 @@
-require("ts-node").register({ files: true })
+require('ts-node').register({ files: true })
 
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-plugin-alias-imports`,
+      resolve: 'gatsby-plugin-alias-imports',
       options: {
         alias: {
-          "~components": `src/components`,
-          "~hooks": `src/hooks`,
-          "~models": `src/models`,
-          "~styles": `src/styles`
+          '~components': 'src/components',
+          '~hooks': 'src/hooks',
+          '~models': 'src/models',
+          '~styles': 'src/styles'
         },
         extensions: []
       }
     },
-    `gatsby-plugin-sharp`,
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `contents`,
+        name: 'contents',
         path: `${__dirname}/src/pages/`
       }
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          `gatsby-remark-code-titles`,
-          `gatsby-remark-copy-linked-files`,
+          'gatsby-remark-code-titles',
+          'gatsby-remark-copy-linked-files',
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800
             }
           },
           {
-            resolve: `gatsby-remark-footnotes`,
+            resolve: 'gatsby-remark-footnotes',
             options: {
-              footnoteBackRefPreviousElementDisplay: `inline`,
-              footnoteBackRefDisplay: `inline`
+              footnoteBackRefPreviousElementDisplay: 'inline',
+              footnoteBackRefDisplay: 'inline'
             }
           },
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: 'gatsby-remark-prismjs',
             options: {}
           }
         ]
       }
     },
-    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-styled-components-dark-mode`,
+      resolve: 'gatsby-styled-components-dark-mode',
       options: {
         dark: require(`${__dirname}/src/styles/theme`).dark,
         light: require(`${__dirname}/src/styles/theme`).light
       }
     },
-    `gatsby-plugin-typescript`
+    'gatsby-plugin-typescript'
   ]
 }
