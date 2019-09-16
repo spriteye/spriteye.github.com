@@ -33,9 +33,12 @@ const StyledItem = styled.div`
 `
 
 const StyledDate = styled.div`
-  width: 9em;
+  width: 12em;
+  padding-right: 1em;
 
   font-size: 0.8em;
+
+  text-align: right
 `
 
 const StyledRows = styled.div`

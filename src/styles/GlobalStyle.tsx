@@ -1,3 +1,4 @@
+import { margin } from 'polished'
 import { createGlobalStyle } from 'styled-components'
 import modernNormalize from 'styled-modern-normalize'
 
@@ -23,8 +24,11 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: ${({ theme }) => theme.color};
     text-decoration: none;
+  }
 
-    cursor: pointer;
+  p {
+    ${margin(0, 0, '1em', 0)}
+    padding: 0;
   }
 `
 
