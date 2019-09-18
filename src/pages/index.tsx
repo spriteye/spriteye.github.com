@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import AllMarkdownRemark from '~models/remark/AllMarkdownRemark'
 import Layout from '~components/Layout'
 import PostList from '~components/Post/List'
+import PageMetadata from '~components/PageMetadata'
 
 interface IndexProps {
   data: {
@@ -13,6 +14,7 @@ interface IndexProps {
 
 const Index: React.FC<IndexProps> = ({ data }: IndexProps) => (
   <Layout>
+    <PageMetadata />
     <PostList posts={data.allMarkdownRemark.edges} />
   </Layout>
 )

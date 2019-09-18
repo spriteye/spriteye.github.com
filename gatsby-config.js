@@ -1,6 +1,12 @@
 require('ts-node').register({ files: true })
 
 module.exports = {
+  siteMetadata: {
+    title: 'spriteye.me',
+    description: 'Personal website of spriteye',
+    author: 'spriteye',
+    siteUrl: 'https://spriteye.me'
+  },
   plugins: [
     {
       resolve: 'gatsby-plugin-alias-imports',
@@ -14,6 +20,7 @@ module.exports = {
         extensions: []
       }
     },
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Avatar from '~components/Avatar'
 import Center from '~components/Center'
 import Layout from '~components/Layout'
+import PageMetadata from '~components/PageMetadata'
 
 const StyledContainer = styled.div`
   max-width: 50rem;
@@ -13,6 +14,7 @@ const StyledContainer = styled.div`
 
 const About: React.FC = () => (
   <Layout>
+    <PageMetadata title='About Hwangmok Cho' />
     <StyledContainer>
       <Center>
         <Avatar size='5rem' />

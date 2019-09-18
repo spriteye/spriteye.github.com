@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Layout from '~components/Layout'
+import PageMetadata from '~components/PageMetadata'
 import Post from '~models/remark/Post'
 import postStyle from '~styles/post-style'
 import prismStyle from '~styles/prism-style'
@@ -42,6 +43,11 @@ interface PostTemplateProps {
 
 const PostTemplate: React.FC<PostTemplateProps> = ({ data }: PostTemplateProps) => (
   <Layout>
+    <PageMetadata
+      title={data.markdownRemark.frontmatter.title}
+      description={data.markdownRemark.frontmatter.description}
+      keywords={data.markdownRemark.frontmatter.tags}
+    />
     <StyledArticle>
       <StyledArticleHeader>
         <StyledArticleTitle>
@@ -64,6 +70,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
         date(formatString: "MMMM DD, YYYY")
         tags
       }
