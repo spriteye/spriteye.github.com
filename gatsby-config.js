@@ -20,6 +20,12 @@ module.exports = {
         extensions: []
       }
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-64527672-1'
+      }
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     {
