@@ -8,14 +8,16 @@ interface PageMetadataProps {
   title?: string,
   description?: string,
   keywords?: string[],
-  image?: string
+  image?: string,
+  restUrl?: string
 }
 
 const PageMetadata: React.FC<PageMetadataProps> = ({
   title,
   description,
   keywords,
-  image
+  image,
+  restUrl = ''
 }: PageMetadataProps) => {
   const siteMetadata = useSiteMetadata()
   return (
@@ -30,7 +32,7 @@ const PageMetadata: React.FC<PageMetadataProps> = ({
       <meta property='og:title' content={title || siteMetadata.title} />
       <meta property="og:description" content={description || siteMetadata.description} />
       <meta property='og:image' content={`${siteMetadata.siteUrl}/${image || 'images/me.png'}}`} />
-      <meta property='og:url' content={`${siteMetadata.siteUrl}`} />
+      <meta property='og:url' content={`${siteMetadata.siteUrl}${restUrl}`} />
     </Helmet>
   )
 }

@@ -47,6 +47,7 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }: PostTemplateProps) 
       title={data.markdownRemark.frontmatter.title}
       description={data.markdownRemark.frontmatter.description}
       keywords={data.markdownRemark.frontmatter.tags}
+      restUrl={data.markdownRemark.fields.slug}
     />
     <StyledArticle>
       <StyledArticleHeader>
@@ -73,6 +74,9 @@ export const query = graphql`
         description
         date(formatString: "MMMM DD, YYYY")
         tags
+      }
+      fields {
+        slug
       }
     }
   }
