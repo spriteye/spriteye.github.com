@@ -4,6 +4,7 @@ interface Frontmatter {
   description: string
   series?: string
   tags: string[]
+  release: boolean
 }
 
 export default Frontmatter

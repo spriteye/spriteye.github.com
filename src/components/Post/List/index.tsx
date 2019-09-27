@@ -15,7 +15,7 @@ interface PostListProps {
 const PostList: React.FC<PostListProps> = ({ posts }: PostListProps) => (
   <StyledContainer>
     {posts.map(({ node }) => (
-      <PostListItem key={node.id} post={node} />
+      node.frontmatter.release && <PostListItem key={node.id} post={node} />
     ))}
   </StyledContainer>
 )

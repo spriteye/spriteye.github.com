@@ -6,6 +6,9 @@ module.exports = async ({ graphql, actions }) => {
       allMarkdownRemark {
         edges {
           node {
+            frontmatter {
+              release
+            }
             fields {
               slug
             }
@@ -15,6 +18,9 @@ module.exports = async ({ graphql, actions }) => {
     }
   `)
   allMarkdownRemark.edges.forEach(({ node }) => {
+    if (!node.frontmatter.release) {
+      return
+    }
     actions.createPage({
       path: node.fields.slug,
       component: resolve('./src/components/Post/Template.tsx'),
