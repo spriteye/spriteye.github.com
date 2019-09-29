@@ -88,7 +88,7 @@ export default () => (
 
 ```
 
-다음 글에서는 웹페이지의 Layout 컴포넌트를 만들어 보겠다.
+[다음 글](/posts/2019/09/gatsby-layout)에서는 웹페이지의 Layout 컴포넌트를 만들어 보겠다.
 
 ## Reference
 * [Gatsby Tutorial - Set Up Your Development Environment](https://www.gatsbyjs.org/tutorial/part-zero/)
