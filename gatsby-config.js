@@ -20,6 +20,7 @@ module.exports = {
         extensions: []
       }
     },
+    'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
