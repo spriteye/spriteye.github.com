@@ -302,7 +302,7 @@ export default () => (
 
 ![](./01-with-layout.png)
 
-다음 글에서는 아래로 스크롤할 때 Header, Footer 컴포넌트를 감추는 작업을 진행한다.
+[다음 글](/posts/2019/10/gatsby-hide-marginals)에서는 아래로 스크롤할 때 Header, Footer 컴포넌트를 감추는 작업을 진행한다.
 
 [^1]: [Styled Components: Enforcing Best Practices In Component-Based Systems](https://www.smashingmagazine.com/2017/01/styled-components-enforcing-best-practices-component-based-systems/)
 [^2]: [CSS-in-JS 모듈들의 npm 트랜드](https://www.npmtrends.com/jss-vs-aphrodite-vs-radium-vs-styled-components-vs-glamorous-vs-emotion-vs-styletron)
