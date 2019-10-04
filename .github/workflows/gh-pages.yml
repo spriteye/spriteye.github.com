@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: '10.16'
 
+      - name: Install pacakges
+        run: npm install
+
       - name: Build
         run: npm run build
 
