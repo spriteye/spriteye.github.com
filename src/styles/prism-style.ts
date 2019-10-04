@@ -91,7 +91,7 @@ const prismStyle = css`
     display: block;
     ${margin(0, '-1.5em', 0, '-1.5em')}
     padding-right: 1em;
-    padding-left: 0.75em;
+    padding-left: 1.2em;
 
     background-color: ${syntax.selectionColor};
     border-left: 0.3em solid ${color.nord11};
