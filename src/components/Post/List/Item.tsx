@@ -38,7 +38,11 @@ const StyledDate = styled.div`
 
   font-size: 0.8em;
 
-  text-align: right
+  text-align: right;
+
+  @media (max-width: 768px) {
+    text-align: left;
+  }
 `
 
 const StyledRows = styled.div`
